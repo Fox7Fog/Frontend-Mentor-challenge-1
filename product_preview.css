@@ -1,0 +1,177 @@
+* {
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+:root {
+    --body-bg-color: hsl(30, 38%, 92%);
+    --card-bg-color: hsl(0, 0%, 100%);
+    --heading-color: hsl(212, 21%, 14%);
+    --price-button-color: hsl(158, 36%, 37%);
+    --text-color: hsl(228, 12%, 48%);
+    --button-hover-color: hsl(158, 36%, 20%);
+}
+
+body {
+    width: min(1440px, 100%);
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-bg-color);
+}
+
+.card {
+    background-color: var(--card-bg-color);
+    width: 42rem; 
+    height: 30rem;
+    border-radius: 7px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 21rem 21rem;
+    grid-template-rows: 30rem;
+    grid-template-areas: "image information";
+}
+
+.image {
+    grid-area: image;
+    display: block;
+    width: 21rem;
+    height: 30rem;
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.information {
+    grid-area: information;
+    color: var(--text-color);   
+    padding: 2rem;
+}
+
+h1 {
+    color: var(--heading-color);
+    font-family: 'Fraunces', serif;
+    font-size: 33px;
+    line-height: 1;
+}
+
+h4 {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 0;
+}
+
+p {
+    letter-spacing: 1px;
+    font-size: 12px;    
+    line-height: 1.6;
+}
+
+.information > a > button {
+    background-color: var(--price-button-color);
+    border-color: var(--price-button-color);
+    border-style: solid;
+    color: var(--card-bg-color);
+    width: 100%; 
+    height: 3.125rem; 
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.information > a {
+    color: --card-bg-color;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+.information > a > button > img {
+    width: 1rem;
+}
+
+.information > a > button:hover {
+    background-color: var(--button-hover-color);
+    border-color: var(--button-hover-color);
+    border-style: solid;
+    cursor: pointer;
+}
+
+.prices {
+    width: 14.375rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.price {
+    color: var(--price-button-color);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.price2 {
+    text-decoration: line-through;
+    font-size: 10px;
+}
+
+/*.attribution {
+    grid-area: attribution;
+}
+/* for mobile */ 
+
+@media screen and (max-width: 700px) {
+    body {
+        width: max(375px, 100vw);
+        height: max(60rem, 100vh);
+        margin: 0;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--body-bg-color);
+    }
+
+    .card {
+        width: 21rem; 
+        height: 45rem;
+        display: grid;
+        grid-template-columns: 21rem;
+        grid-template-rows: 15rem 30rem;
+        justify-content: center;
+        align-items: center;
+        grid-template-areas: "image"
+        "information";
+        background-color: var(--card-bg-color);
+        border-radius: 7px;
+    }
+
+    .image {
+        grid-area: image;
+        width: 21rem;
+        height: 15rem;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        border-bottom-left-radius: 0px;
+        background-image: url(images/image-product-mobile.jpg);
+        background-size: cover;
+    }
+
+    .information {
+        grid-area: information;
+        color: var(--text-color);   
+        padding: 2rem;
+    }
+
+}
+
+
