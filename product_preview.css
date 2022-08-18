@@ -132,12 +132,13 @@ p {
 
 @media screen and (max-width: 700px) {
     body {
-        width: max(375px, 100vw);
+        width: 100%;
         height: max(60rem, 100vh);
         margin: 0;
         display: grid;
-        justify-content: center;
-        align-items: center;
+        place-content: center;
+        /*justify-content: center;
+        align-items: center;*/
         background-color: var(--body-bg-color);
     }
 
@@ -147,8 +148,9 @@ p {
         display: grid;
         grid-template-columns: 21rem;
         grid-template-rows: 15rem 30rem;
-        justify-content: center;
-        align-items: center;
+        place-content: center;
+        /*justify-content: center;
+        align-items: center;*/
         grid-template-areas: "image"
         "information";
         background-color: var(--card-bg-color);
